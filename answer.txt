@@ -1,0 +1,17 @@
+tiny: insert 36.6 μs
+      append 131.6 μs
+small: insert 50.4 μs
+       append 165.9 μs
+medium: insert 191.6 μs
+        append 205.4 μs 
+large: insert 8.9987 ms
+       append 668.8 μs 
+extra large: insert 866.3695 ms
+             append 3.1313 ms
+
+The pattern that I saw is that the small the array the better the insert function runs, but as the arrays get bigger the faster the insert function runs. In the tiny array the insert function ran at 36.6 μs and append ran at 131.6 μs, the append is 3 times faster. But, later on in the extra large, insert ran at insert 866.3695 ms and append ran append 3.1313 ms, significantly faster than insert. For the medium they were very similar only 10 μs apart.
+
+EXTRA CREDIT:
+The reason the slower function is so slow with big data is because its using unshift making it exponentially slower the bigger the array gets.
+
+
